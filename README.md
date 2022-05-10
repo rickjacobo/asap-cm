@@ -26,14 +26,14 @@ or
 docker run -d --name="<name of container>" -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<secure password>" -e "MSSQL_PID=Express" -p $Port mcr.microsoft.com/mssql/server:2019-latest
 ````
 
-* Setup Database (Enter sqlhost, username, password, database, table)
-````
-Add-AsapCmDatabase
-````
-
 * Import asap-cm Module
 ````
 Import-Module asap-cm.psm1
+````
+
+* Setup Database (Enter sqlhost, username, password, database, table)
+````
+Add-AsapCmDatabase
 ````
 
 * Add Change
