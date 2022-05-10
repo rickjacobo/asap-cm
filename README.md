@@ -28,12 +28,12 @@ docker run -d --name="<name of container>" -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<s
 
 * Setup Database (Enter sqlhost, username, password, database, table)
 ````
-./Add-AsapCmDatabase.ps1
+Add-AsapCmDatabase
 ````
 
-* Import AsapCm Module
+* Import asap-cm Module
 ````
-Import-Module asapcm.psm1
+Import-Module asap-cm.psm1
 ````
 
 * Add Change
