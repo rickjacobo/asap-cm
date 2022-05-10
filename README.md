@@ -17,7 +17,7 @@ A PowerShell Module to manage changes using a Microsoft SQL backend.
 ````
 git clone https://github.com/rickjacobo/asap-cm
 ````
-* If you don't already have a Microsoft SQL encvironment run Start-SQLContainer.ps1 setup wizard
+* If you don't already have a Microsoft SQL encvironment run Start-SQLContainer.ps1 setup wizard (MUST BE RUN FROM MODULE DIRECTORY)
 ````
 ./Start-SQLContainer.ps1
 ````
@@ -26,33 +26,33 @@ or
 docker run -d --name="<name of container>" -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<secure password>" -e "MSSQL_PID=Express" -p $Port mcr.microsoft.com/mssql/server:2019-latest
 ````
 
-* Import asap-cm Module
+* Import asap-cm Module (MUST BE RUN FROM MODULE DIRECTORY)
 ````
 Import-Module asap-cm.psm1
 ````
 
-* Setup Database (Enter sqlhost, username, password, database, table)
+* Setup Database  (MUST BE RUN FROM MODULE DIRECTORY)
 ````
 Add-AsapCmDatabase
 ````
 
-* Add Change
+* Add Change (MUST BE RUN FROM MODULE DIRECTORY)
 ````
 Add-AsapCm -Change <change> -Description <description> -Notes <notes> -Status <status>
 ````
 
-* Get Change
+* Get Change (MUST BE RUN FROM MODULE DIRECTORY)
 ````
 Get-AsapCm
 ````
 
-* Update Change
+* Update Change (MUST BE RUN FROM MODULE DIRECTORY)
   * Get Id with Get-AsapCm
 ````
 Set-AsapCm -Id <obtain from Get-AsapCm> -Change <change> -Description <description> -Notes <notes> -Status <status>
 ````
 
-* Remove Change
+* Remove Change (MUST BE RUN FROM MODULE DIRECTORY)
   * Get Id with Get-AsapCm
 ```
 Remove-AsapCm -Id <obtain from Get-AsapCm>
